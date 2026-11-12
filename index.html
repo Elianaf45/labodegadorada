@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinoteca La Bodega Dorada</title>
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header class="encabezado">
+        <div class="logo">
+            <i class="fa-solid fa-wine-glass"></i>
+            <h1>La Bodega Dorada</h1>
+            <p>El placer de brindar, el arte de compartir.</p>
+        </div>
+
+        <button class="btn-carrito" onclick="abrirCarrito()">
+            <i class="fa-solid fa-cart-shopping"></i>
+            Carrito <span id="contador">0</span>
+        </button>
+    </header>
+
+    <!-- MENU DE CATEGORIAS -->
+    <nav class="menu">
+        <button class="activo" onclick="filtrarProductos('Promociones', this)">Promociones</button>
+        <button onclick="filtrarProductos('Vinos', this)">Vinos</button>
+        <button onclick="filtrarProductos('Espumantes', this)">Espumantes</button>
+        <button onclick="filtrarProductos('Aperitivos', this)">Aperitivos</button>
+        <button onclick="filtrarProductos('Gin', this)">Gin</button>
+        <button onclick="filtrarProductos('Whisky', this)">Whisky</button>
+        <button onclick="filtrarProductos('Otros', this)">Otros</button>
+    </nav>
+
+    <!-- PRODUCTOS -->
+    <main class="contenedor">
+
+        <div class="titulo-seccion">
+            <h2 id="titulo-categoria">Promociones</h2>
+            <p>Descubrí nuestros productos y elegí tu favorito.</p>
+        </div>
+
+        <section class="productos" id="lista-productos">
+            <!-- Los productos se cargan desde JavaScript -->
+        </section>
+
+    </main>
+
+    <!-- CARRITO -->
+    <div class="fondo-carrito" id="fondo-carrito" onclick="cerrarCarrito()"></div>
+
+    <aside class="panel-carrito" id="panel-carrito">
+        <div class="cabecera-carrito">
+            <h2>Mi carrito</h2>
+            <button onclick="cerrarCarrito()">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div id="contenido-carrito"></div>
+
+        <div class="total-carrito">
+         <h3>Total: <span id="total">$0</span></h3>
+
+          <button onclick="vaciarCarrito()">Vaciar carrito</button>
+
+          <button class="btn-whatsapp" onclick="enviarWhatsApp()">
+             <i class="fa-brands fa-whatsapp"></i>
+             Enviar pedido por WhatsApp
+          </button>
+       </div>
+    </aside>
+
+  <!-- PIE DE PAGINA -->
+<footer class="pie-pagina">
+
+    <div class="marca-footer">
+        <span>VINOTECA</span>
+        <h2>LA BODEGA<br>DORADA</h2>
+
+        <p class="direccion-footer"> Calle San Martin 333</p>
+        
+    </div>
+
+
+    <div class="horarios">
+        <h3>Horarios de atención</h3>
+        <p>09:00 hs - 13:00 hs</p>
+        <p>18:00 hs - 22:00 hs</p>
+    </div>
+
+    <div class="redes">
+        <h3>Seguinos en nuestras redes sociales</h3>
+
+        <div class="iconos-redes">
+            <a href="#" target="_blank" aria-label="Instagram">
+                <i class="fa-brands fa-instagram"></i>
+            </a>
+
+            <a href="#" target="_blank" aria-label="Facebook">
+                <i class="fa-brands fa-facebook"></i>
+            </a>
+        </div>
+    </div>
+
+    <div class="derechos">
+        <p>© 2026 Vinoteca La Bodega Dorada - Todos los derechos reservados.</p>
+    </div>
+
+</footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
